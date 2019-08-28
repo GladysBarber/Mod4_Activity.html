@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+
+
+<h2>Sort numbers in assending order.</h2>
+
+<script>
+
+
+
+
+var numArray = [140, 104, 99];
+for (var i = 0; i < numArray.length - 1; i++) {
+    var min = i;
+    for (var j = i + 1; j < numArray.length; j++) {
+        if (numArray[j] < numArray[min]) {
+            min = j;
+        }
+    }
+    if (min != i) {
+        var target = numArray[i];
+        numArray[i] = numArray[min];
+        numArray[min] = target;
+    }
+}
+console.log(numArray);
+document.write("Assending order is:" + numArray + "<br >");
+</script>
+
+
+
+</body>
+</html>
